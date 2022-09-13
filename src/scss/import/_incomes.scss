@@ -1,0 +1,135 @@
+.incomes {
+   .totals-on-day {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3.125rem; /* 50px */
+      padding: 1.875rem; /* 30px */
+      border-radius: 5px;
+      box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+      background: $secondary;
+      p {
+         font-size: 1.125rem; /* 18px */
+         color: #FFF;
+      }
+   }
+   .incomes-wrapper {
+      .wrapper-header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 1.875rem; /* 30px */
+         h3 { font-size: 1.875rem; }
+         .wrapper-header-nav {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn-add {
+               padding: 0.625rem 2.5rem; /* 10px 40px */
+               outline: none;
+               border: none;
+               border-radius: 5px;
+               color: #FFF;
+               background: $secondary;
+               transition: all .3s ease;
+               cursor: pointer;
+               &:hover { opacity: .9; }
+            }
+         }
+      }
+      .incomes-table {
+         width: 100%;
+         margin-bottom: 1.875rem;
+         border-collapse: separate;
+         border-spacing: 0 1rem; /* 16px */
+         text-align: left;
+         .table-row-header {
+            font-size: 1rem; /* 1rem */
+            color: #FFF;
+            background: $primary;
+            th {
+               padding: 1.25rem; /* 20px */
+               &:first-child { border-radius: 5px 0 0 5px; }
+               &:last-child { border-radius: 0 5px 5px 0; }
+            }
+         }
+         .table-row-body {
+            font-size: 1.125rem; /* 18px */
+            color: $secondary;
+            box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+            background: #FFF;
+            td {
+               padding: 1.25rem /* 20px */;
+               &:first-child { border-radius: 5px 0 0 5px; }
+               &:last-child { border-radius: 0 5px 5px 0; }
+               .btn-option {
+                  width: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 0.3125rem 0; /* 10px 0 */
+                  text-align: center;
+                  border: 1px solid #CECECE;
+                  border-radius: 3px;
+                  background: $alternate;
+                  transition: all .3s ease;
+                  cursor: pointer;
+                  .btn-icon {
+                     font-size: 1.125rem;
+                     color: $secondary;
+                     pointer-events: none;
+                  }
+                  &:hover { background: #CECECE; }
+               }
+            }
+            &.matriz { background: #42855B; color: #FFF; }
+            &.duraznos { background: #1C3879; color: #FFF; }
+            &.san-miguel { background: #D1512D; color: #FFF; }
+         }
+      }
+      .outcomes-table {
+         width: 100%;
+         border-collapse: separate;
+         border-spacing: 0 1rem; /* 0 16px */
+         margin-bottom: 3.125rem; /* 50px */
+         text-align: left;
+         .table-row-header {
+            width: 100%;
+            color: #FFF;
+            background: $secondary;
+            th {
+               padding: 1.25rem; /* 20px */
+               &:first-child { border-radius: 5px 0 0 5px; }
+               &:last-child { border-radius: 0 5px 5px 0; }
+            }
+         }
+         .table-row-body {
+            width: 100%;
+            color: $secondary;
+            box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+            background: #FFF;
+            td {
+               padding: 1.25rem; /* 20px */
+               font-size: 1.125rem; /* 18px */
+               &:first-child { border-radius: 5px 0 0 5px; }
+               &:last-child { border-radius: 0 0 5px 5px; }
+               &.empty-cell { border-radius: 5px; }
+               .btn-option {
+                  display: grid;
+                  place-items: center;
+                  padding: 0.625rem 1.25rem;
+                  border: none;
+                  background: transparent;
+                  cursor: pointer;
+                  .btn-icon {
+                     font-size: 1.125rem; /* 18px */
+                     color: $secondary; 
+                     pointer-events: none;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

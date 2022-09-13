@@ -1,0 +1,38 @@
+$primary: #BA0B27;
+$secondary: #171717;
+$alternate: #F2F2F2;
+$sucess: #519259;
+
+/* Global variables */
+*, *::before, *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Outfit', sans-serif;
+   font-size: 1rem; /* 16px */
+   background: #F2F2F2;
+}
+
+.container {
+   width: 90%;
+   max-width: 90%;
+   margin: 0 auto;
+   &.full-height-container {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+   }
+}
+
+.btn {
+   font-family: 'Outfit', sans-serif;
+   font-size: 1rem; /* 16px */
+}
+
+input {
+   font-family: 'Outfit', sans-serif;
+   font-size: 1rem; /* 16px */
+}

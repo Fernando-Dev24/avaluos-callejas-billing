@@ -1,0 +1,211 @@
+.shadow-modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   display: grid;
+   place-items: center;
+   background: rgba($color: $secondary, $alpha: .5);
+   z-index: 10;
+   .modal {
+      position: relative;
+      width: 90%;
+      padding: 2.5rem; /* 40px */
+      border-radius: 5px;
+      box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+      background: #FFF;
+      .btn-close-modal {
+         &.icon {
+            position: absolute;
+            top: 1.875rem; /* 30px */
+            right: 2.5rem; /* 40px */
+            font-size: 1.5625rem; /* 25px */
+            color: $primary;
+            cursor: pointer;
+         }
+      }
+      /* Modal sizes */
+      &.overflow {
+         height: 90vh;
+         border-radius: 10px;
+         overflow: auto;
+      }
+      &.half-modal { width: 70%; }
+
+      /* Modal styles */
+      &.month-modal {
+         h2 {
+            margin-bottom: 1.25rem; /* 20px */
+            font-size: 1.875rem; /* 30px */
+            color: $secondary;
+         }
+         .month-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem; /* 20px */
+            &.four-column { grid-template-columns: repeat(4, 1fr); }
+            .month-card {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding: 1.25rem; /* 20px */
+               border: 1px solid #CECECE;
+               border-radius: 3px;
+               transition: all .3s ease;
+               cursor: pointer;
+               &:hover {
+                  border-color: $secondary;
+                  background: $secondary;
+                  h2 { color: #FFF; }
+               }
+               h2 { margin: 0; }
+            }
+         }
+      }
+      &.modal-prices {
+         h3 {
+            margin-bottom: 1.25rem; /* 20px */
+            font-size: 1.875rem; /* 30px */
+            color: $secondary;
+         }
+         .btn-add-price {
+            width: 100%;
+            padding: 0.9375rem 1.25rem; /* 15px 20px */
+            border: none;
+            border-radius: 5px;
+            color: #FFF;
+            background: $secondary;
+            transition: all .3s ease;
+            cursor: pointer;
+            &:hover { opacity: .9; }
+         }
+      }
+      &.cancel-modal {
+         h3 {
+            margin-bottom: 1.25rem; /* 10px */
+            text-align: center;
+            font-size: 1.875rem; /* 25px */
+            color: $secondary;
+         }
+         .cancel-modal-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn-option {
+               width: 100%;
+               padding: 0.625rem 1.25rem; /* 10px 20px */
+               font-size: 1.125rem; /* 18px */
+               border: 1px solid #CECECE;
+               border-radius: 3px;
+               background: transparent;
+               transition: all .3s ease;
+               cursor: pointer;
+               &.active {
+                  margin-right: 0.625rem; /* 10px */
+                  border-color: $secondary;
+                  color: #FFF;
+                  background: $secondary;
+                  &:hover { opacity: .9; }
+               }
+               &:hover { border-color: $secondary; }
+            }
+         }
+      }
+      &.export-modal {
+         position: relative;
+         width: max-content;
+         padding: 0;
+         transition: all .3s ease;
+         &:hover .export-nav { visibility: visible; opacity: 1; }
+         .export-nav {
+            position: fixed;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: none;
+            opacity: 0;
+            transition: all .3s ease;
+            .btn-option {
+               padding: 0.625rem 1.25rem; /* 10px 20px */
+               border: none;
+               border-radius: 3px;
+               color: #FFF;
+               box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+               background: $secondary;
+               transition: all .3s ease;
+               cursor: pointer;
+               &:first-child { margin-right: 1.25rem; /* 20px */ }
+               &.danger { background: $primary; }
+               &:hover {
+                  background: #302f2f;
+                  &.danger { background: #d10d2d; }
+               }
+            }
+         }
+      }
+      &.income-modal {
+         h3 {
+            margin-bottom: 1.25rem; /* 20px */
+            font-size: 1.5625rem; /* 25px */
+            color: $secondary;
+         }
+         .form-modal {
+            width: 100%;
+            .modal-row {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               gap: 0.625rem; /* 10px */
+               .danger {
+                  border: 1px solid $primary;
+                  border-radius: 5px;
+                  color: $primary;
+                  background: transparent;
+                  transition: all .3s ease;
+                  cursor: pointer;
+                  &:hover {
+                     color: #FFF;
+                     background: $primary;
+                  }
+               }
+            }
+            .input-field {
+               margin-bottom: 1.25rem; /* 20px */
+               label {
+                  display: block;
+                  margin-bottom: 0.625rem; /* 10px */
+                  font-size: 1rem; /* 16px */
+                  color: rgba($color: $secondary, $alpha: .9);
+                  cursor: pointer;
+               }
+               input, select {
+                  width: 100%;
+                  font-family: 'Outfit', sans-serif;
+                  padding: 1.25rem; /* 20px */
+                  font-size: 1rem; /* 16px */
+                  outline: none;
+                  border: 1px solid #CECECE;
+                  border-radius: 5px;
+                  transition: all .3s ease;
+                  &:focus { border: 1px solid #171717; }
+               }
+            }
+            .btn-submit {
+               width: 100%;
+               padding: 0.9375rem 1.25rem; /* 15px 20px */
+               border: none;
+               border-radius: 5px;
+               color: #FFF;
+               background: $secondary;
+               transition: all .3s ease;
+               cursor: pointer;
+               &:hover { background: rgba($color: $secondary, $alpha: .9); }
+            }
+         }
+      }
+   }
+}

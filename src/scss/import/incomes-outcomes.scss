@@ -1,0 +1,97 @@
+.incomes-outcomes {
+   .bills-counter {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.625rem; /* 10px */
+      margin-bottom: 1.875rem; /* 30px */
+      .counter-item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 0.625rem; /* 10px */
+         border-radius: 5px;
+         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+         background: #FFF;
+         p {
+            font-size: 0.875rem; /* 14px */
+         }
+         p.counter-gadget {
+            width: 20%;
+            padding: 5px; /* 5px */
+            text-align: center;
+            border-radius: 5px;
+            color: #FFF;
+            background: #277BC0;
+         }
+      }
+   }
+   .incomes-outcomes-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 1.875rem; /* 30px */
+      .data-info {
+         padding: 1.875rem; /* 30px */
+         border-radius: 5px;
+         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+         background: #FFF;
+         .data-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.9375rem 0; /* 15px 0 */
+            border-bottom: 1px solid rgba($color: $secondary, $alpha: .2);
+            &.no-visible {
+               user-select: none;
+               border-bottom: 1px solid transparent;
+               p { opacity: 0; }
+            }
+            &.total {
+               padding: 15px 10px; /* 15px 10px */
+               border-bottom: none;
+               border-radius: 3px;
+               color: #FFF;
+               background: $secondary;
+            }
+         }
+      }
+   }
+   .outcomes-table {
+      width: 100%;
+      .table-wrapper {
+         width: 100%;
+         border-spacing: 0;
+         border-collapse: separate;
+         .table-row-header {
+            background: #898AA6;
+            th {
+               padding: 10px 0;
+               text-align: left;
+               color: #FFF;
+               &:first-child {
+                  padding-left: 20px;
+                  border-radius: 5px 0 0 0;
+               }
+               &:last-child { border-radius: 0 5px 0 0; }
+            }
+         }
+         .table-row-body {
+            background: #FFF;
+            td {
+               padding: 0.625rem 0; /* 10px 0 */
+               border-bottom: 1px solid rgba($color: $secondary, $alpha: .2);
+               &:first-child { padding: 1.25rem; /* 20px */ }
+            }
+            &:last-child {
+               box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+               td {
+                  &:first-child { border-radius: 0 0 0 5px; }
+                  &:last-child { border-radius: 0 0 5px 0; }
+                  border-bottom: none;
+               }
+            }
+         }
+      }
+   }
+}

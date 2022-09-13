@@ -1,0 +1,155 @@
+.header-wrapper {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   padding: 1.25rem 0; /* 20px 0 */
+   border-bottom: 1px solid #CECECE;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+   background: #FFF;
+   .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .btn-back {
+         display: flex;
+         align-items: center;
+         padding: 0.625rem 1.25rem; /* 10px 20px */
+         text-decoration: none;
+         border: 1px solid #acabab;
+         border-radius: 5px;
+         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+         color: $secondary;
+         background: transparent;
+         cursor: pointer;
+         &:hover { background: #f1f1f1; }
+         .btn-icon {
+            margin-right: 0.625rem; /* 10px */
+            font-size: 1.25rem; /* 20px */
+            color: $secondary;
+         }
+      }
+      h2 {
+         font-size: 1.5625rem; /* 1.875rem */
+         font-weight: 500;
+         color: $secondary;
+      }
+      p {
+         font-size: 1.25rem; /* 25px */
+         font-weight: 500;
+         color: $secondary;
+      }
+   }
+}
+
+.registers-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 7.8125rem; /* 125px */
+   margin-bottom: 2.5rem; /* 40px */
+   border-bottom: 2px solid rgba($color: $secondary, $alpha: .5);
+   h3 {
+      margin-bottom: 0.3125rem; /* 5px */
+      font-size: 1.5625rem; /* 25px */
+      color: $secondary;
+   }
+   .btn-icon {
+      width: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+      .icon {
+         font-size: 1.875rem; /* 30px */
+         color: $secondary;
+         pointer-events: none;
+      }
+   }
+}
+
+.register-content {
+   margin-bottom: 3.125rem; /* 30px */
+   .register-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 0;
+      text-align: left;
+      .table-row-header {
+         color: #FFF;
+         background: #3A3845;
+         th {
+            padding: 1.25rem; /* 20px */
+            &:first-child { border-radius: 5px 0 0 0; }
+            &:last-child { border-radius: 0 5px 0 0; }
+         }
+      }
+      .table-row-body {
+         background: #FFF;
+         td {
+            padding: 0.9375rem 1.875rem; /* 15px 30px */
+            border-bottom: 1px solid #CECECE;
+         }
+         &.date-row {
+            background: #FFF;
+            text-align: left;
+            td {
+               width: 100%;
+               padding: 0.625rem 1.875rem; /* 10px 30px */
+               vertical-align: middle;
+               text-transform: uppercase;
+               .date-flex {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  .date-wrapper {
+                     display: flex;
+                     align-items: center;
+                  }
+                  .day-totals {
+                     width: 65%;
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     p { font-size: 0.9375rem; /* 15px */ }
+                  }
+               }
+               .btn-option {
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-left: 0.625rem; /* 10px */
+                  border: none;
+                  background-color: transparent;
+                  cursor: pointer;
+                  .btn-icon {
+                     color: $secondary;
+                     font-size: 1rem; /* 18px */
+                     pointer-events: none;
+                  }
+                  &:hover {
+                     .btn-icon { color: $primary; }
+                  }
+               }
+            }
+         }
+         &.totals-row {
+            color: #FFF;
+            background: #3A3845;
+            td {
+               padding: 0.625rem 1.875rem; /* 10px 30px */
+               .totals-info {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  p { font-size: 0.875rem; /* 14px */ }
+               }
+            }
+            &:last-child {
+               box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+               td { border-radius: 0 0 5px 5px; }
+            }
+         }
+      }
+   }
+}

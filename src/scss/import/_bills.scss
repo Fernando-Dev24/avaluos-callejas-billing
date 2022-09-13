@@ -1,0 +1,135 @@
+.bills {
+   width: 100%;
+   margin-bottom: 3.125rem; /* 50px */
+   .btn-new-bill {
+      width: 100%;
+      display: block;
+      margin-bottom: 3.125rem; /* 30px */
+      padding: 0.9375rem; /* 15px */
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.125rem; /* 20px */
+      border: none;
+      border-radius: 5px;
+      color: #FFF;
+      background: $secondary;
+      transition: all .3s ease;
+      cursor: pointer;
+      &:hover { opacity: .9; }
+   }
+   .bills-wrapper {
+      .bills-header {
+         display: flex;
+         justify-content: space-between;
+         align-items: baseline;
+         h3 {
+            font-size: 1.875rem; /* 30px */
+            color: $secondary;
+         }
+         .btn-filter {
+            position: relative;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.625rem 2.5rem; /* 10px 40px */
+            text-align: center;
+            font-size: 1.125rem; /* 18px */
+            border: none;
+            border-radius: 5px;
+            color: #FFF;
+            background: $primary;
+            transition: all .3s ease;
+            cursor: pointer;
+            .btn-icon { margin-left: 0.625rem; /* 10px */ }
+            .filter-options {
+               position: absolute;
+               top: 3.125rem; /* 50px */
+               left: 0;
+               width: 100%;
+               padding: 10px;
+               border-radius: 5px;
+               background: $primary;
+               z-index: 10;
+               .btn-option {
+                  width: 100%;
+                  display: inline-block;
+                  margin-bottom: 0.625rem; /* 10px */
+                  padding: 0.625rem; /* 10px */
+                  border: none;
+                  border-radius: 3px;
+                  background-color: #FFF;
+                  &:last-child { margin-bottom: 0; }
+                  transition: all .3s ease;
+                  cursor: pointer;
+                  &:hover { color: $primary; }
+               }
+            }
+         }
+      }
+      .bills-table {
+         position: relative;
+         width: 100%;
+         border-collapse: separate;
+         border-spacing: 0 1rem;
+         text-align: center;
+         .table-row-header {
+            font-size: 1rem; /* 16px */
+            color: #FFF;
+            background: $secondary;
+            th {
+               padding: 1.25rem; /* 20px */
+               &:first-child { border-radius: 5px 0 0 5px; }
+               &:last-child { border-radius: 0 5px 5px 0; }
+            }
+         }
+         .table-row-body {
+            box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+            color: $secondary;
+            background: #FFF;
+            td {
+               padding: 1.25rem; /* 20px */
+               &:first-child { border-radius: 5px 0 0 5px; }
+               &:nth-child(2) { width: 100%; }
+               &:last-child { border-radius: 0 5px 5px 0; }
+               .btn-option {
+                  display: flex;
+                  align-items: center;
+                  padding: 0.625rem; /* 10px */
+                  border: none;
+                  background: transparent;
+                  cursor: pointer;
+                  .btn-icon {
+                     font-size: 1.125rem; /* 18px */
+                     color: $secondary;
+                     pointer-events: none;
+                  }
+               }
+            }
+         }
+      }
+      .bills-info {
+         width: 100%;
+         display: grid;
+         grid-template-columns: repeat(5, 1fr);
+         gap: 10px;
+         text-align: center;
+         padding: 1.25rem; /* 20px */
+         border-radius: 5px;
+         color: #FFF;
+         background: $primary;
+         p { font-size: 0.875rem; /* 14px */ }
+      }
+      .empty-bills {
+         padding: 2.5rem; /* 40px */
+         border-radius: 5px;
+         box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+         background: #FFF;
+         h2 {
+            text-align: center;
+            font-size: 1.875rem; /* 30px */
+            color: $secondary;
+         }
+      }
+   }
+}

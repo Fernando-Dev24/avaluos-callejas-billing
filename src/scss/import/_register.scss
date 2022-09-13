@@ -1,0 +1,31 @@
+.register {
+   width: 100%;
+   .register-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 3.125rem auto; /* 50px auto */
+      h2 {
+         font-size: 1.875rem; /* 30px */
+         color: $secondary;
+      }
+      .register-nav {
+         width: 40%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         .btn-option {
+            padding: 0.9375rem 1.25rem; /* 15px 20px */
+            border: 1px solid $secondary;
+            border-radius: 3px;
+            color: $secondary;
+            background: transparent;
+            transition: all .3s ease;
+            cursor: pointer;
+            &:nth-child(2) { margin-right: 0; }
+            &.active { color: #FFF; background: $secondary; }
+            &:hover { color: #FFF; background: $secondary; }
+         }
+      }
+   }
+}
