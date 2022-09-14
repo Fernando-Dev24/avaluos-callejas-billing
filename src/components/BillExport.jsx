@@ -4,9 +4,6 @@ import { formatDate } from '../helpers/formatDate';
 import { formatPrice } from '../helpers/formatPrice';
 import { numberToString } from '../helpers/numberToString';
 import html2pdf from 'html2pdf.js';
-/* assets */
-import LogoLowOpacity from '../assets/logo-low-opacity.png';
-import billImage from '../assets/FACTURA.jpg';
 
 export const BillExport = ({
    newBill,
