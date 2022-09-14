@@ -1,7 +1,26 @@
 .bill-page {
    width: 15cm;
    height: auto;
-   padding: 1.25rem; /* 20px */
+   padding: 20px; /* 20px */
+   margin-top: 0;
+   /* .bill-example {
+      position: absolute;
+      top: 0;
+      left: 0;
+      img {
+         width: 100%;
+         opacity: .1;
+      }
+   } */
+   .bg-logo {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      img {
+         width: 100%;
+      }
+   }
    .page-header {
       display: flex;
       justify-content: space-between;
@@ -41,8 +60,9 @@
       }
    }
    .costumer-prices {
+      position: relative;
       width: 100%;
-      height: 440px;
+      height: 375px;
       border-left: 1px solid;
       border-right: 1px solid;
       border-bottom: 1px solid;

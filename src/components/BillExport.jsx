@@ -5,7 +5,8 @@ import { formatPrice } from '../helpers/formatPrice';
 import { numberToString } from '../helpers/numberToString';
 import html2pdf from 'html2pdf.js';
 /* assets */
-import { ReactComponent as Logo } from '../assets/logo.svg';
+import LogoLowOpacity from '../assets/logo-low-opacity.png';
+import billImage from '../assets/FACTURA.jpg';
 
 export const BillExport = ({
    newBill,
@@ -15,6 +16,7 @@ export const BillExport = ({
 }) => {
    /* props */
    const { billPrices: prices } = newBill;
+   const { ref } = newBill;
    
    /* handleExport */
    const handleExport = async () => {
@@ -25,12 +27,12 @@ export const BillExport = ({
       /* export options */
       let options = {
          margin: 0,
-         filename: newBill.costumer,
+         filename: `FACTURA ${ newBill.costumer }`,
          image: { type: 'jpg', quality: 1 },
          html2canvas: { scale: 2.5 },
          jsPDF: {
             unit: 'cm',
-            format: "a4",
+            format: [ 15, 21.5 ],
             orientation: 'portrait',
             compress: true,
          },
@@ -70,6 +72,9 @@ export const BillExport = ({
    return (
       <section className="shadow-modal">
          <section className="modal export-modal overflow">
+            {/* <figure className='bill-example'>
+               <img src={ billImage } alt="" />
+            </figure> */}
             <section className="bill-page" id='bill'>
                {/* info */}
                <table className="bill-info">
@@ -127,7 +132,7 @@ export const BillExport = ({
                      </thead>
                      <tbody>
                         <tr className='table-row-body bill-label'>
-                           <td colSpan={ 6 }>SERVICIO DE AVALÚO</td>
+                           <td colSpan={ 6 }>{ ref !== 'TALLER CASA MATRIZ' && ref !== 'SM TALLER' ? 'SERVICIO AVALÚO' : 'SERVICIO DE VEHÍCULO' }</td>
                         </tr>
                         { prices.length > 0 &&
                            prices.map(({ id, amount, description, exemptSales, salesNotSubjects, unitPrice, affectedSales }) => (
